@@ -9,11 +9,15 @@ You can view the original Flutter project and its findings here:
 
 ## The Native Integration Journey
 
-### 1. Project Setup: A Smoother Start
+### 1. Prerequisite: Dashboard Setup & Key Retrieval
+
+Before any code can be written, the first step is to create an application within the Tenjin dashboard to obtain the necessary SDK Key. This presents the first point of friction in the onboarding flow, as the documentation jumps directly into code integration without first outlining this mandatory administrative step.
+
+### 2. Project Setup: A Smoother Start
 
 Unlike the initial Flutter setup which required resolving JDK and Gradle environment mismatches, the native Android project setup was straightforward. The environment, having been corrected during the first exploration, allowed for an immediate and successful initial build.
 
-### 2. Core Integration & The Critical `AD_ID` Confirmation
+### 3. Core Integration & The Critical `AD_ID` Confirmation
 
 The central goal of this exploration was to verify if the `AD_ID` permission is as critical for native Android as it is for Flutter.
 
