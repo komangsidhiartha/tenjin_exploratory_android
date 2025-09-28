@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
 
-        tenjinInstance = TenjinSDK.getInstance(this, "ZFGZRYPETOHIC83MGV1YZYUF716ZLC38")
+        tenjinInstance = TenjinSDK.getInstance(this, "YOUR_TENJIN_API_KEY")
         tenjinInstance.setAppStore(TenjinSDK.AppStoreType.googleplay)
         tenjinInstance.connect()
     }
