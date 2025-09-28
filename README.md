@@ -21,6 +21,17 @@ Unlike the initial Flutter setup which required resolving JDK and Gradle environ
 
 The central goal of this exploration was to verify if the `AD_ID` permission is as critical for native Android as it is for Flutter.
 
+```xml
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+```
+
+### How to Run This Project
+
+1.  Clone this repository.
+2.  Open the project in Android Studio.
+3.  In `MainActivity.kt`, replace `"YOUR_TENJIN_API_KEY"` with your actual key from the Tenjin dashboard.
+4.  Build and run the application.
+
 **Investigation & Discovery:**
 The test confirmed this hypothesis unequivocally.
 
