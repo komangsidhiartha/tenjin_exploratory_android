@@ -21,17 +21,6 @@ Unlike the initial Flutter setup which required resolving JDK and Gradle environ
 
 The central goal of this exploration was to verify if the `AD_ID` permission is as critical for native Android as it is for Flutter.
 
-```xml
-<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-```
-
-### How to Run This Project
-
-1.  Clone this repository.
-2.  Open the project in Android Studio.
-3.  In `MainActivity.kt`, replace `"YOUR_TENJIN_API_KEY"` with your actual key from the Tenjin dashboard.
-4.  Build and run the application.
-
 **Investigation & Discovery:**
 The test confirmed this hypothesis unequivocally.
 
@@ -39,7 +28,18 @@ The test confirmed this hypothesis unequivocally.
 
 2. **With the Permission:** After adding the permission, the SDK correctly captured the device's unique Google Advertising ID (GAID), and user-level data appeared correctly in the Tenjin dashboard.
 
+   ```xml
+   <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+   ```
+
 This result proves that the `AD_ID` permission is a **fundamental requirement across all Android implementations** of the Tenjin SDK, not a quirk of the Flutter wrapper. Omitting it renders user-level attribution ineffective.
+
+### How to Run This Project
+
+1.  Clone this repository.
+2.  Open the project in Android Studio.
+3.  In `MainActivity.kt`, replace `"YOUR_TENJIN_API_KEY"` with your actual key from the Tenjin dashboard.
+4.  Build and run the application.
 
 ## Comparative Analysis: Flutter vs. Native Kotlin
 
